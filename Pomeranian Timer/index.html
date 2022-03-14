@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pomeranian Timer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    
+    <div class="flexbox-container">
+
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <button class="button" id="close-alarm">&times;</button>
+        </div>
+        <div class="modal-body">
+          <iframe id="video" autoplay width="560" height="315" src="https://www.youtube.com/embed/y3PcelCeraw?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+
+      </div>
+      <div id="overlay"></div>
+      <div class="image">
+        <img src="assets/lesser-dog.gif" class="left-img">
+      </div>
+      <div class="interface">
+        <h1>Pomeranian Timer</h1>
+        <h2>Like a Pomodoro Timer, But Better!</h2>
+        <nav id="navbar">
+            <a href="#work" class = "link" id="work_button">Work</a>
+            <a href="#short" class = "link" id="short_button">Short Break</a>
+            <a href="#long" class = "link" id="long_button">Long Break</a>
+        </nav>
+        
+        <h3 id="tag_line">Lorem ipsum</h3>
+        <p id="timer">Lorem Ipsum</p>
+        <span>
+            <button class="button" id="set_time">Set Timer</button>
+            <button class="button" id="start_time">Start Timer</button>
+            <button class="button" id="stop_time">Stop Timer</button>
+            <button class="button" id="reset_time">Reset Timer</button>
+        </span>
+        <div class="dropdown">
+          <span>
+            <select>
+              <optgroup label="Gabe The Dog Songs">
+                <option value="spiderDance">Spider Dance</option>
+                <option value="megalovania">Megalovania</option>
+                <option value="superMario">Super Mario</option>
+                <option value="tetris">Tetris</option>
+                <option value="starWars" selected>Star Wars</option>
+                <option value="jurassicPark">Jurassic Park</option>
+                <option value="theXFiles">The X Files</option>
+                <option value="pokemon">Pokemon</option>
+              </optgroup>
+            </select>
+          </span>
+        </div>
+        <div>
+          <button class="button" id="alarm-select">Select Alarm</button>
+          <button class="button" id="alarm-preview">Preview Alarm</button>
+          <button class="button" id="debug">debug</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="assets/lesser-dog.gif" class="right-img">
+      </div>
+    </div>
+    
+  
+  </body>
+  
+  <script src="./js/time.js"></script>
+  <script src="./js/listen.js"></script>
+  <script src="./js/display.js"></script>
+  <script src="./js/background.js"></script>
+  <script src="./js/main.js"></script>
+</html>
