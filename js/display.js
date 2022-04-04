@@ -6,13 +6,12 @@ class Tabs{
     }
 
     RemoveHyperlinks(elements){
-            console.log("Begin RemoveHyperlinks: " + CurrentTab);
-            if(CurrentTab === "Work"){
+            if(this.CurrentTab === "Work"){
                 elements.WorkButton.innerHTML = "Work";
                 elements.ShortButton.innerHTML = "";
                 elements.LongButton.innerHTML = "";
             }
-            else if(CurrentTab === "Short"){
+            else if(this.CurrentTab === "Short"){
                 elements.WorkButton.innerHTML = "";
                 elements.ShortButton.innerHTML = "Short Break";
                 elements.LongButton.innerHTML = "";
@@ -33,16 +32,9 @@ class Tabs{
     
     };
 
-    LaunchVideo(elements){
-        elements.modal.classList.add('active')
-        elements.overlay.classList.add('active')
-        //TODO: Create code to launch pop up
-    };
 
-    ExitModal(elements){
-        elements.modal.classList.remove('active')
-        elements.overlay.classList.remove('active') 
-    };
+
+
 
 
 }
