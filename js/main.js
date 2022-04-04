@@ -57,27 +57,25 @@ elements.StartTime.addEventListener("click", e => {
     };
     tabs.RemoveHyperlinks(elements)
     console.log(timer.status)
-    while(timer.status === "on"){
-        console.log("in loop")
-        setTimeout(() => {
-            console.log("timeout")
-            
-            elements.timer.innerHTML = `${timer.CurrentTime} minutes : ${timer.seconds} seconds`;
-            if(timer.CurrentTime !== 0 && timer.seconds === 0){
-                timer.CurrentTime--;
-                timer.seconds = 60
-            }
-            if(timer.CurrentTime === 0 && timer.seconds === 0){
-                elements.timer.innerHTML = "Done!"
-                tabs.LaunchVideo();
-                timer.StopTimer();
-                timer.status = "done";
-            }
-            timer.seconds--;
-            
-            
-            }, 1000);
+    setInterval(() => {
+        console.log("timeout")
+        
+        elements.timer.innerHTML = `${timer.CurrentTime} minutes : ${timer.seconds} seconds`;
+        if(timer.CurrentTime !== 0 && timer.seconds === 0){
+            timer.CurrentTime--;
+            timer.seconds = 60
         }
+        if(timer.CurrentTime === 0 && timer.seconds === 0){
+            elements.timer.innerHTML = "Done!"
+            tabs.LaunchVideo();
+            timer.StopTimer();
+            timer.status = "done";
+        }
+        timer.seconds--;
+        
+        
+        }, 1000);
+        
     })
 
 elements.StopTime.addEventListener("click", e => {
